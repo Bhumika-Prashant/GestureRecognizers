@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2mM-jf-cBZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwipeGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="65"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="QzO-vl-Nqe">
+            <objects>
+                <viewController id="2mM-jf-cBZ" customClass="SecondViewController" customModule="SwipeGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TUK-FB-b7t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPw-FD-y57">
+                                <rect key="frame" x="20" y="248" width="374" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Swifthub" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LmI-6W-TG5">
+                                        <rect key="frame" x="16" y="16" width="342" height="368"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="7eC-hj-ivs"/>
+                                    <constraint firstAttribute="trailing" secondItem="LmI-6W-TG5" secondAttribute="trailing" constant="16" id="LwM-xr-3jb"/>
+                                    <constraint firstAttribute="height" constant="400" id="UQ0-mO-RD9"/>
+                                    <constraint firstAttribute="bottom" secondItem="LmI-6W-TG5" secondAttribute="bottom" constant="16" id="ZJc-k5-zxs"/>
+                                    <constraint firstItem="LmI-6W-TG5" firstAttribute="leading" secondItem="XPw-FD-y57" secondAttribute="leading" constant="16" id="rdR-II-0mh"/>
+                                    <constraint firstItem="LmI-6W-TG5" firstAttribute="top" secondItem="XPw-FD-y57" secondAttribute="top" constant="16" id="vHz-gH-eOb"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JRS-Io-YJW" appends="YES" id="SbN-tb-KX0"/>
+                                    <outletCollection property="gestureRecognizers" destination="XE4-H1-asC" appends="YES" id="1mJ-k2-qWF"/>
+                                    <outletCollection property="gestureRecognizers" destination="Y9j-ij-efi" appends="YES" id="dRv-XB-oCu"/>
+                                    <outletCollection property="gestureRecognizers" destination="mrj-Sg-nMk" appends="YES" id="3b4-F7-EBL"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7lc-ln-SOn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XPw-FD-y57" firstAttribute="centerX" secondItem="TUK-FB-b7t" secondAttribute="centerX" id="PC5-XY-XNO"/>
+                            <constraint firstItem="XPw-FD-y57" firstAttribute="centerY" secondItem="TUK-FB-b7t" secondAttribute="centerY" id="ZgS-dA-Iar"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerView" destination="XPw-FD-y57" id="Fgv-yi-tnT"/>
+                        <outlet property="directionLabel" destination="LmI-6W-TG5" id="EAz-XW-glY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZB-GG-SQH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="JRS-Io-YJW">
+                    <connections>
+                        <action selector="swipeGesture:" destination="2mM-jf-cBZ" id="cIK-lh-4DI"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="XE4-H1-asC">
+                    <connections>
+                        <action selector="swipeGesture:" destination="2mM-jf-cBZ" id="rNR-qX-t88"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="Y9j-ij-efi">
+                    <connections>
+                        <action selector="swipeGesture:" destination="2mM-jf-cBZ" id="O3n-qQ-dSS"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="mrj-Sg-nMk">
+                    <connections>
+                        <action selector="swipeGesture:" destination="2mM-jf-cBZ" id="3qw-W4-E9g"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="857.97101449275374" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
